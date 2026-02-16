@@ -1,0 +1,10 @@
+services:
+  media-toolkit:
+    build: .
+    container_name: media-toolkit
+    ports:
+      - "1008:3000"
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+    restart: unless-stopped
